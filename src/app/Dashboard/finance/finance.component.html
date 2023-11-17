@@ -1,0 +1,313 @@
+<div class="flex bg bg-slate-100">
+    <app-sidebar *ngIf="sidebarService.isSidebarOpen()"></app-sidebar>
+
+    <div class="main w-full ">
+        <div class="main-content overflow-y-auto">
+            <app-navbar><button class=" rounded-full hover:bg-gray-100 text-lg p-2"><img
+                        src="/assets/svgs/svg-export/svgexport-45.svg" alt=""></button>
+            </app-navbar>
+            <!-- content here -->
+            <div class=" w-full flex justify-center ">
+                <div class="flex justify-between mt-10 w-div">
+                    <div class="text-xl font-medium">
+                        <p>Finance dashboard</p>
+                        <p class="text-sm">Keep track of your financial status</p>
+                    </div>
+                    <div>
+                        <button class="p-2 px-8 border border-gray-500 m-2  rounded-full">Report</button>
+                        <button class="p-2 px-8 border border-gray-500 m-2  rounded-full">Setting </button>
+                        <button class="p-2 px-8 border border-gray-500 m-2 bg-blue-500 rounded-full">Export</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center h-96 pt-5">
+                <div class="flex justify-between   rounded-xl   w-div">
+                    <div class="w-1/2 h-full mr-3 ">
+                        <div class=" rounded-3xl overflow-hidden p-1 mb-3 h-1/2 bg-white">
+                            <div class="flex justify-between m-5 items-center">
+                                <div>
+                                    <p class="font-medium ">Previous Statement</p>
+                                    <p class="text-xs">Paid on 25 October 2023</p>
+                                </div>
+                                <button class="hover:bg-gray-100 p-3 rounded-full"> <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                        <path
+                                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                    </svg></button>
+                            </div>
+                            <div class="flex ml-5 relative">
+                                <div class=" mr-7">
+                                    <div class="flex items-center text-xs text-slate-500">Card Limit
+                                    </div>
+                                    <div class="flex items-center text-2xl ">
+                                        $34,500.00
+                                    </div>
+                                </div>
+                                <div class=" mr-7">
+                                    <div class="flex items-center text-xs text-slate-500">Spent
+
+                                    </div>
+                                    <div class="flex items-center text-2xl ">
+                                        $27,221.21
+                                    </div>
+                                </div>
+                                <div class=" mr-7">
+                                    <div class="flex items-center text-xs text-slate-500">Minimum
+                                    </div>
+                                    <div class="flex items-center text-2xl ">
+                                        $7,331.94
+                                    </div>
+                                </div>
+                                <img class="absolute -right-6 top-7  filter saturate-100 contrast-100" width="96"
+                                    src="/assets/svgs/svg-export/svgexport-109.svg" alt="">
+
+                            </div>
+                        </div>
+                        <div class=" rounded-3xl overflow-hidden p-1 h-1/2 bg-white">
+                            <div class="flex justify-between m-5 items-center">
+                                <div>
+                                    <p class="font-medium ">Current Statement</p>
+                                    <p class="text-xs">Must be paid before 25 November 2023</p>
+                                </div>
+                                <button class="hover:bg-gray-100 p-3 rounded-full"> <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                        <path
+                                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                    </svg></button>
+                            </div>
+                            <div class="flex relative ml-5 mb-2">
+                                <div class=" mr-7">
+                                    <div class="flex items-center text-xs text-slate-500">Card Limit
+                                    </div>
+                                    <div class="flex items-center text-2xl ">
+                                        $34,500.00
+                                    </div>
+                                </div>
+                                <div class=" mr-7">
+                                    <div class="flex items-center text-xs text-slate-500">Spent
+
+                                    </div>
+                                    <div class="flex items-center text-2xl ">
+                                        $39,819.41
+                                    </div>
+                                </div>
+                                <div class=" mr-7">
+                                    <div class="flex items-center text-xs text-slate-500">Minimum
+                                    </div>
+                                    <div class="flex items-center text-2xl ">
+                                        $9,112.51
+                                    </div>
+                                </div>
+                                <img class="absolute -right-6 top-7  " width="96"
+                                    src="/assets/svgs/svg-export/svgexport-110.svg" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="w-1/2 h-full ml-5">
+                        <div class=" rounded-3xl overflow-hidden p-1  h-full bg-white">
+                            <div class="flex justify-between m-5 items-center">
+                                <div>
+                                    <p class="font-medium ">Account Balance</p>
+                                    <p class="text-xs">Monthly balance growth and avg. monthly income</p>
+                                </div>
+                                <button class="hover:bg-gray-100 p-3 rounded-full"> 12 months</button>
+                            </div>
+                            <div class="flex ml-5 mb-2">
+                                <div class=" mr-7">
+                                    <div class="flex items-center text-2xl ">
+                                        38.33% </div>
+                                    <div class="flex items-center text-xs text-slate-500">Average Monthly Growth
+                                    </div>
+                                </div>
+                                <div class=" mr-7">
+                                    <div class="flex items-center text-2xl ">
+                                        $45,332.00
+                                    </div>
+                                    <div class="flex items-center text-xs text-slate-500">Average Monthly Income
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full  ">
+                                <app-acc-balance></app-acc-balance>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content here -->
+
+            </div>
+            <div class="flex w-full mt-10 justify-center">
+                <div class="flex w-div overflow-hidden">
+                    <div class="w-2/3">
+                        <div class="w-full mb-10 rounded-xl border bg-white">
+                            <div class="left flex m-7 mb-2 py-3 items-center justify-between">
+                                <div class="font-medium">
+                                    <p>Recent Transactions</p>
+                                    <p class="text-slate-500">1 pending, 4 completed</p>
+                                </div>
+                            </div>
+
+                            <div class="flex mx-5 mb-5">
+                                <table class="min-w-full">
+                                    <thead>
+                                        <tr>
+                                            <th class="px-6 py-4 border-b-2   text-left">Transaction ID</th>
+                                            <th class="px-6 py-4 border-b-2  text-left">Date</th>
+                                            <th class="px-6 py-4 border-b-2  text-left">Name</th>
+                                            <th class="px-6 py-4 border-b-2  text-left">Amount</th>
+                                            <th class="px-6 py-4 border-b-2  text-left">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let transaction of recentTransactions" class="mb-4">
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap text-xs text-slate-500">
+                                                {{
+                                                transaction.id }}</td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.date }}
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.name }}
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.amount |
+                                                currency:'USD':'symbol':'1.2-2' }}</td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap text-start"><span
+                                                    class="p-1 rounded-full font-medium text-xs"
+                                                    [ngClass]="{'bg-green-200 text-green-800': transaction.status === 'COMPLETED', 'bg-red-200 text-red-900': transaction.status !== 'COMPLETED'}">{{
+                                                    transaction.status }}</span></td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="left flex  mb-5 mx-10  items-center justify-between">
+                                <button class="border rounded-full px-4 p-2">See All Transactions</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3 mx-7 mr-0 h-full">
+                        <div class="w-full mb-10 rounded-xl border bg-white">
+                            <div class="left flex m-7 mb-2 py-3 items-center justify-between">
+                                <div class="font-medium">
+                                    <p>Recent Transactions</p>
+                                    <p class="text-slate-500">1 pending, 4 completed</p>
+                                </div>
+
+                            </div>
+                            <div class="m-7 my-0 py-3 ">
+                                Last month; you had <span class="font-semibold">223</span> expense transactions, <span
+                                    class="font-semibold ">12</span> savings entries and <span
+                                    class="font-semibold">4</span> bills.
+                            </div>
+
+                            <div class=" m-7 my-0 py-3">
+                                <div class="flex justify-start mb-7">
+                                    <div class="w-14 h-14 bg-red-100 flex items-center justify-center rounded-md"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="rgb(153,27,27)" aria-hidden="true" fit=""
+                                            height="40%" width="40%" preserveAspectRatio="xMidYMid meet"
+                                            focusable="false">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex  w-64 px-3 flex-col justify-start items-start">
+                                        <p class="text-xs text-slate-500">Expenses</p>
+                                        <p class="text-lg font-medium">$11,763.34</p>
+                                        <div class="w-full bg-red-200 rounded-full h-1 dark:bg-gray-700">
+                                            <div class="bg-red-700 h-1 rounded-full" style="width: 45%"></div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="flex pb-2 items-end w-20 justify-end">2.6%
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            stroke="rgb(115,200,146)" aria-hidden="true" fit="" height="16" width="16"
+                                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                                            <path fill-rule="evenodd"
+                                                d="M10 2a.75.75 0 01.75.75v12.59l1.95-2.1a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 111.1-1.02l1.95 2.1V2.75A.75.75 0 0110 2z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-start mb-7">
+                                    <div class="w-14 h-14 bg-blue-100 flex items-center justify-center rounded-md"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="rgb(55,48,163)" aria-hidden="true" fit=""
+                                            height="40%" width="40%" preserveAspectRatio="xMidYMid meet"
+                                            focusable="false">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex  w-64 px-3 flex-col justify-start items-start">
+                                        <p class="text-xs text-slate-500">Savings</p>
+                                        <p class="text-lg font-medium">$10,974.12</p>
+                                        <div class="w-full bg-blue-200 rounded-full h-1 dark:bg-gray-700">
+                                            <div class="bg-blue-700 h-1 rounded-full" style="width: 6%"></div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="flex pb-2 items-end w-20 justify-end">12.7%
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" fit="" height="20" width="16" stroke="rgb(255,0,0)" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                            <path fill-rule="evenodd" d="M10 18a.75.75 0 01-.75-.75V4.66L7.3 6.76a.75.75 0 11-1.1-1.02l3.25-3.5a.75.75 0 011.1 0l3.25 3.5a.75.75 0 01-1.1 1.02l-1.95-2.1v12.59A.75.75 0 0110 18z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-start mb-2">
+                                    <div class="w-14 h-14 bg-cyan-100 flex items-center justify-center rounded-md"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="rgb(29,104,99)" aria-hidden="true" fit=""
+                                            height="40%" width="40%" preserveAspectRatio="xMidYMid meet"
+                                            focusable="false">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex  w-64 px-3 flex-col justify-start items-start">
+                                        <p class="text-xs text-slate-500">Bills</p>
+                                        <p class="text-lg font-medium">$1,789.22</p>
+                                        <div class="w-full bg-blue-700 rounded-full h-1 dark:bg-gray-700">
+                                            <div class="bg-blue-700 h-1 rounded-full" style="width: 45%"></div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="flex pb-2 items-end w-20 justify-end">
+                                        105.7%
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" fit="" height="20" width="16" stroke="rgb(255,0,0)" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                            <path fill-rule="evenodd" d="M10 18a.75.75 0 01-.75-.75V4.66L7.3 6.76a.75.75 0 11-1.1-1.02l3.25-3.5a.75.75 0 011.1 0l3.25 3.5a.75.75 0 01-1.1 1.02l-1.95-2.1v12.59A.75.75 0 0110 18z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="px-1 text-slate-600 text-xs ">
+                                    Exceeded your personal limit! Be careful next month.
+                                </p>
+
+
+                            </div>
+
+
+
+                            <div class="left flex mt-12 mb-5 mx-10  items-center justify-between">
+                                <button class="border rounded-full px-4 p-2">Download Summary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    <app-chat class="w-20 border-l shadow-lg bg-white"></app-chat>

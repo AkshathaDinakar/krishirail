@@ -1,0 +1,98 @@
+<div class="flex">
+    <app-sidebar *ngIf="sidebarService.isSidebarOpen()"></app-sidebar>
+
+    <div class="main w-full ">
+        <div class="main-content overflow-y-auto">
+            <app-navbar><button class=" rounded-full hover:bg-gray-100 text-lg p-2"><img
+                        src="/assets/svgs/svg-export/svgexport-45.svg" alt=""></button>
+            </app-navbar>
+            <div class="  flex bg-white m-1">
+                <!-- crypto-list.component.html -->
+                <div id="cryptoContainer" class="flex-container">
+                    <div class="sticky top-0 overflow-auto border-r-2 h-side overflow-x-hidden">
+                        <aside class="w-80 p-4     ">
+                            <div *ngFor="let crypto of cryptoData" class="crypto-item">
+                                <div class="flex justify-between py-4">
+                                    <div class="">
+                                        <p>{{ crypto.name }} <span>({{ crypto.symbol }})</span></p>
+                                        <p class="flex items-baseline text-xl">{{ crypto.price| currency }} <img
+                                                width="16" src="{{ crypto.img }}" alt="">
+                                            <span class="text-xs">{{ crypto.percentChange }}%</span>
+                                        </p>
+                                    </div>
+                                    <div class="img">
+                                        <img width="120" height="100" src="{{crypto.imageUrl}}" alt="">
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class=" pt-5">
+                                <label for="">Action</label>
+                                <mat-form-field class="w-full ">
+                                    <mat-select>
+                                        <mat-option value="one">BUY</mat-option>
+                                        <mat-option value="two">SELL</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class=" pt-2">
+                                <label for="">Wallet</label>
+                                <mat-form-field class="w-full ">
+                                    <mat-select>
+                                        <mat-option value="one">Bitcoin</mat-option>
+                                        <mat-option value="two">Ethereum</mat-option>
+                                        <mat-option value="two">Bitcoin Cash</mat-option>
+                                        <mat-option value="two">XRP</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class=" py-2">
+                                <label for="">Amount</label>
+                                <mat-form-field class="w-full ">
+                                    <mat-select>
+                                        <mat-option value="one">ETH</mat-option>
+                                        <mat-option value="two">USD</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <button class="rounded-full w-full h-10 text-white bg-blue-600">BUY</button>
+                        </aside>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class=" flex justify-between p-6 border-b h-30 ">
+                        <div class="left">
+                            <p class="text-xl text-slate-500"> Bitcoin <span class="text-xl">(BTC)</span></p>
+                            <p class="text-2xl">$8,878.48 </p>
+                        </div>
+                        <div class="right flex">
+                            <div class="1 border-slate-200 p-3 px-4 border rounded-l-lg">
+                                <p class="text-xs text-gray-600">Market Cap</p>
+                                <p class="text-lg">$148.75B</p>
+                            </div>
+                            <div class="1 border-slate-200 p-3 px-4 border-y ">
+                                <p class="text-xs text-gray-600">Volume</p>
+                                <p class="text-lg">$148.75B</p>
+                            </div>
+                            <div class="1 border-slate-200 p-3 px-4 border ">
+                                <p class="text-xs text-gray-600">Supply</p>
+                                <p class="text-lg">$148.75B</p>
+                            </div>
+                            <div class="1 border-slate-200 p-3 px-4 border-y border-r  rounded-r-lg">
+                                <p class="text-xs text-gray-600">All Time High</p>
+                                <p class="text-lg">$148.75B</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-5/6">
+
+                        <app-bitcoin></app-bitcoin>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-chat class="w-20 border-l shadow-lg bg-white"></app-chat>
+
+
+</div>

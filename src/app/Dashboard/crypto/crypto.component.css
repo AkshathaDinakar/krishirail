@@ -1,0 +1,15 @@
+/* Apply styles to the scrollbar */
+.sticky::-webkit-scrollbar {
+    width: 3px; /* Set the width of the scrollbar */
+  }
+  
+  /* Specify the track (the area the thumb moves along) */
+  .sticky::-webkit-scrollbar-track {
+    background: #f1f1f1; /* You can change the background color if needed */
+  }
+  
+  /* Specify the thumb (the draggable handle) */
+  .sticky::-webkit-scrollbar-thumb {
+    background: #b1b0b0a2; /* You can change the color of the scrollbar thumb */
+  }
+  

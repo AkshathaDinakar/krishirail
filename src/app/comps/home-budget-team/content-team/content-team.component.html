@@ -1,0 +1,22 @@
+<div class="flex justify-evenly w-full flex-wrap">
+    <div *ngFor="let user of Team">
+      <div class="flex ">
+        <div class="border rounded-2xl w-card shadow-lg mr-5 mb-5 h-80 bg-white">
+          <div class="flex justify-center m-5 items-center">
+            <div class="mt-5">
+              <img class="rounded-full" [src]="user.image" alt="">
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            {{ user.username }}
+            <p class="text-xs font-medium text-gray-400">{{ user.position }}</p>
+          </div>
+          <div class="relative top-10 overflow-hidden">
+            <button class="hover:bg-gray-200 p-4 border w-1/2 border-x-0 border-gray-200">email</button>
+            <button class="hover:bg-gray-200 p-4 border w-1/2 border-gray-200">Call</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

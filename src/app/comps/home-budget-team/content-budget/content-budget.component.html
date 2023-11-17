@@ -1,0 +1,103 @@
+<div class="w-div flex">
+    <div class="w-2/3 m-2">
+        <div class="w-full h-full mb-1 pb-4 rounded-xl  border  bg-white ">
+            <div class="left flex m-2 p-3 items-center justify-between">
+                <div class="font-medium ">Budget Distribution</div>
+
+            </div>
+            <div class="flex justify-center">
+
+                <app-budget-distribution></app-budget-distribution>
+            </div>
+        </div>
+    </div>
+    <div class="w-1/3">
+
+        <div class="border  m-3 rounded-2xl  shadow-lg h-40 bg-white ">
+            <div class="flex justify-between m-3 mx-5 items-center">
+                <p class="font-medium ">Weekly Expenses</p>
+                <button class="hover:bg-gray-100 p-3 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                        <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                    </svg></button>
+            </div>
+            <div class="flex justify-between m-2 mx-5 items-center">
+                <div class="w-1/2">
+                    <p class="text-2xl font-bold">$17,663.00</p>
+                    <p class="text-xs flex"><span class="flex text-green-500 px-1">
+                        <img class="px-1" src="/assets/svgs/svg-export/svgexport-101.svg" alt="">2% </span>below projected</p>
+                </div>
+                <div class="chart w-1/2"><img src="/assets/svgs/ig1.png" alt=""></div>
+            </div>
+        </div>
+        <div class="border  m-3 rounded-2xl  shadow-lg h-40 bg-white ">
+            <div class="flex justify-between m-5 items-center">
+                <p class="font-medium ">Monthly Expenses</p>
+                <button class="hover:bg-gray-100 p-3 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                        <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                    </svg></button>
+            </div>
+            <div class="flex justify-between m-2 mx-5 items-center">
+                <div class="w-1/2">
+                    <p class="text-2xl font-bold">$54,663.00</p>
+                    <p class="text-xs flex "><span class="flex text-red-500 px-1">
+                        <img class="px-1" src="/assets/svgs/svg-export/svgexport-102.svg" alt="">4% </span>below projected</p>
+                </div>
+                <div class="chart w-1/2"><img src="/assets/svgs/ig2.png" alt=""></div>
+            </div>
+        </div>
+        <div class="border m-3 rounded-2xl  shadow-lg h-40 bg-white ">
+            <div class="flex justify-between m-5 items-center">
+                <p class="font-medium ">Early Expenses</p>
+                <button class="hover:bg-gray-100 p-3 rounded-full"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                        <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                    </svg></button>
+            </div>
+            <div class="flex justify-between m-2 mx-5 items-center">
+                <div class="w-1/2">
+                    <p class="text-2xl font-bold">$17,663.00</p>
+                    <p class="text-xs flex"><span class="flex text-red-500 px-1">
+                        <img class="px-1" src="/assets/svgs/svg-export/svgexport-102.svg" alt="">3% </span>below projected</p>
+                </div>
+                <div class="chart w-1/2"><img src="/assets/svgs/ig3.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+</div><div class="w-div pr-3">
+    <div class="w-full mb-10 rounded-xl border bg-white">
+        <div class="left flex m-2 p-3 items-center justify-between">
+            <div class="font-medium">Budget Details</div>
+        </div>
+
+        <div class="flex mx-5 mb-10">
+            <table class="min-w-full">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-3 text-left">Type</th>
+                        <th class="px-6 py-3 text-left">Total Budget</th>
+                        <th class="px-6 py-3 text-left">Expenses (USD)</th>
+                        <th class="px-6 py-3 text-left">Expenses (%)</th>
+                        <th class="px-6 py-3 text-left">Remaining (USD)</th>
+                        <th class="px-6 py-3 text-left">Remaining (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let detail of budgetDetails">
+                        <td class="px-6 flex items-center py-4 whitespace-nowrap"><div class="w-2 mx-2 h-2 rounded-full {{detail.color}}"></div>{{ detail.type }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">{{ detail.totalBudget | currency:'USD':'symbol':'1.2-2' }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">{{ detail.expensesUSD | currency:'USD':'symbol':'1.2-2' }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">{{ detail.expensesPercent }}%</td>
+                        <td class="px-6 py-4 whitespace-nowrap">{{ detail.remainingUSD | currency:'USD':'symbol':'1.2-2' }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex items-center"><div class="w-1 h-4 m-2 {{detail.bg}}"><div class=" w-1 h-2  {{detail.svg}} "></div></div>{{ detail.remainingPercent }}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

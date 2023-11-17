@@ -1,0 +1,282 @@
+<div class="flex">
+    <app-sidebar *ngIf="sidebarService.isSidebarOpen()"></app-sidebar>
+
+    <div class="main bg-slate-100 w-full ">
+        <div class="main-content overflow-y-auto">
+            <app-navbar><button class=" rounded-full hover:bg-gray-100 text-lg p-2"><img
+                        src="/assets/svgs/svg-export/svgexport-45.svg" alt=""></button>
+            </app-navbar>
+
+            <div class="w-full  flex justify-center">
+                <div class="w-div flex justify-between  h-28 items-center">
+                    <div>
+                        <p class="font-medium text-2xl">Analytics dashboard</p>
+                        <p class="px-1 text-xs">Monitor metrics, check reports and review performance</p>
+                    </div>
+                    <div class="flex ">
+                        <button class=" items-center border border-gray-500 flex rounded-full p-2 m-2 px-5 "><img
+                                class="pr-3" src="/assets/svgs/svg-export/svgexport-104.svg" alt="">Settings</button>
+                        <button class=" items-center flex rounded-full p-2 m-2 px-5 text-white bg-blue-500"><img
+                                class="pr-3" src="/assets/svgs/svg-export/svgexport-103.svg" alt="">Export</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full  flex justify-center">
+                <div class="w-div ">
+                    <!-- content graph -->
+                    <div class="w-full  ">
+                        <div class="w-full mb-10 overflow-hidden rounded-3xl  border bg-gray-800 ">
+                            <div class="left flex m-5 p-3 items-center justify-between">
+                                <div>
+                                    <div class="font-medium text-2xl text-white">Visitor OverView</div>
+                                    <div class="font-medium text-slate-400">Number of Unique Visitor</div>
+
+                                </div>
+                                <div class="flex items-center">
+                                    <button class="rounded-full p-2 px-5 m-1 hover:bg-gray-600 text-white">Last
+                                        Year</button>
+                                    <button class="rounded-full p-2 px-5 m-1 hover:bg-gray-600 text-white">This
+                                        Year</button>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <app-visitor-overview></app-visitor-overview>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="w-full flex">
+                        <div class="w-1/3 rounded-2xl overflow-hidden h-30 bg-white shadow-md">
+                            <div class="">
+                                <div class="flex justify-between m-5">
+
+                                    <div class="font-medium text-lg">Conversations</div>
+                                    <button class="p-1 px-3 text-xs rounded-full bg-gray-200">30 Days</button>
+                                </div>
+                                <div class="m-5">
+                                    <p class="text-5xl font-semibold">
+                                        4123 <span class="text-xs font-normal text-slate-600">below target</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-full h-16">
+                                <app-conversation></app-conversation>
+
+                            </div>
+                        </div>
+
+                        <div class="w-1/3 rounded-2xl overflow-hidden ml-4 h-30 bg-white shadow-md">
+                            <div class="">
+                                <div class="flex justify-between m-5">
+
+                                    <div class="font-medium text-lg">Conversations</div>
+                                    <button class="p-1 px-3 text-xs rounded-full bg-gray-200">30 Days</button>
+                                </div>
+                                <div class="m-5">
+                                    <p class="text-5xl font-semibold">
+                                        4123 <span class="text-xs font-normal text-slate-600">below target</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-full h-16">
+                                <app-impression></app-impression>
+                            </div>
+                        </div>
+
+                        <div class="w-1/3 rounded-2xl overflow-hidden ml-4 h-30 bg-white shadow-md">
+                            <div class="">
+                                <div class="flex justify-between m-5">
+
+                                    <div class="font-medium text-lg">Conversations</div>
+                                    <button class="p-1 px-3 text-xs rounded-full bg-gray-200">30 Days</button>
+                                </div>
+                                <div class="m-5">
+                                    <p class="text-5xl font-semibold">
+                                        4123 <span class="text-xs font-normal text-slate-600">below target</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-full h-16">
+                                <app-visits></app-visits>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="w-full mt-7 ">
+                        <div class="w-full mb-10 overflow-hidden rounded-3xl  border bg-white ">
+                            <div class="left flex m-5 p-1 items-center justify-between">
+                                <div class>
+                                    <div class="font-medium  ">Visitors vs. Page Views</div>
+                                    <div class="font-medium text-slate-400"></div>
+
+                                </div>
+                                <div class="flex items-center">
+
+                                    <button
+                                        class="rounded-full p-1 px-3 m-1 hover:bg-gray-400 bg-slate-100 text-slate-700">30
+                                        days</button>
+                                </div>
+                            </div>
+                            <div class="m-5 flex ">
+                                <div class="">
+                                    <div class="flex items-center text-slate-500">Overall Score <img
+                                            src="/assets/svgs/svg-export/svgexport-106.svg" alt="">
+                                    </div>
+                                    <div class="flex items-center text-3xl font-semibold">
+                                        472 <img width="20" class="ml-3" src="/assets/svgs/svg-export/svgexport-107.svg"
+                                            alt=""><span class="text-xs font-light text-green-500 pl-1">42.9%</span>
+                                    </div>
+                                </div>
+                                <div class="pl-20">
+                                    <div class="flex items-center text-slate-500">Average Ratio <img
+                                            src="/assets/svgs/svg-export/svgexport-106.svg" alt="">
+                                    </div>
+                                    <div class="flex items-center text-3xl font-semibold">
+                                        472 <img width="20" class="ml-3" src="/assets/svgs/svg-export/svgexport-108.svg"
+                                            alt=""><span class="text-xs font-light text-red-500 pl-1">13.3%</span>
+                                    </div>
+                                </div>
+                                <div class="pl-20">
+                                    <div class="flex items-center text-slate-500">Predicted Ratio <img
+                                            src="/assets/svgs/svg-export/svgexport-106.svg" alt="">
+                                    </div>
+                                    <div class="flex items-center text-3xl font-semibold">
+                                        472 <img width="20" class="ml-3" src="/assets/svgs/svg-export/svgexport-107.svg"
+                                            alt=""><span class="text-xs font-light text-green-500 pl-1">22.9%</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="">
+                                <app-visitorvspage></app-visitorvspage>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="w-full  flex justify-center">
+                        <div class="w-div flex pb-10 items-center">
+                            <div>
+                                <p class="font-medium text-2xl">Your Audience</p>
+                                <p class="px-1 text-xs">Demographic properties of your users</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex w-full mb-10 justify-between">
+                        <div class="border rounded-2xl w-card shadow-lg m-3  bg-white ">
+                            <div class="flex justify-between m-5 items-center">
+                                <p class="font-medium ">New vs. Returning</p>
+                                <button class="hover:bg-gray-100 bg-slate-100 p-1 rounded-full">30 days</button>
+                            </div>
+                            <div class="flex flex-col items-center font-bold text-6xl">
+                                <app-donut1></app-donut1>
+                            </div>
+                            <div>
+                                <div class="flex justify-between p-5 py -2">
+                                    <p>New</p>
+                                    <p>36,868 </p>
+                                    <p>80%  </p>
+                                </div>
+                                <hr>
+                                <div class="flex justify-between p-5 py-4">
+                                    <p>Returning
+                                    </p>
+                                    <p>9,217 </p>
+                                    <p>20%  </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-2xl w-card shadow-lg m-3  bg-white ">
+                            <div class="flex justify-between m-5 items-center">
+                                <p class="font-medium ">Gender</p>
+                                <button class="hover:bg-gray-100 bg-slate-100 p-1 rounded-full">30 days</button>
+                            </div>
+                            <div class="flex flex-col items-center font-bold text-6xl">
+                                <app-donut2></app-donut2>
+                            </div>
+                            <div>
+                                <div class="flex justify-between p-5 py -2">
+                                    <p>Male</p>
+                                    <p>36,868 </p>
+                                    <p>80%  </p>
+                                </div>
+                                <hr>
+                                <div class="flex justify-between p-5 py-4">
+                                    <p>Female
+                                    </p>
+                                    <p>9,217 </p>
+                                    <p>20%  </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-2xl w-card shadow-lg m-3  bg-white ">
+                            <div class="flex justify-between m-5 items-center">
+                                <p class="font-medium ">Age</p>
+                                <button class="hover:bg-gray-100 bg-slate-100 p-1 rounded-full">30 days</button>
+                            </div>
+                            <div class="flex flex-col items-center font-bold text-6xl">
+                                <app-donut3></app-donut3>
+                            </div>
+                            <div>
+                                <div class="flex justify-between p-5 py -2">
+                                    <p>Under 30</p>
+                                    <p>36,868 </p>
+                                    <p>80%  </p>
+                                </div>
+                                <hr>
+                                <div class="flex justify-between p-5 py-4">
+                                    <p>Over 30
+                                    </p>
+                                    <p>9,217 </p>
+                                    <p>20%  </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-2xl w-card shadow-lg m-3  bg-white ">
+                            <div class="flex justify-between m-5 items-center">
+                                <p class="font-medium ">Language</p>
+                                <button class="hover:bg-gray-100 bg-slate-100 p-1 rounded-full">30 days</button>
+                            </div>
+                            <div class="flex flex-col items-center font-bold text-6xl">
+                              <app-donut4></app-donut4>
+                            </div>
+                            <div>
+                                <div class="flex justify-between p-5 py -2">
+                                    <p>English</p>
+                                    <p>36,868 </p>
+                                    <p>80%  </p>
+                                </div>
+                                <hr>
+                                <div class="flex justify-between p-5 py-4">
+                                    <p>Others
+                                    </p>
+                                    <p>9,217 </p>
+                                    <p>20%  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- content graph -->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <app-chat class="w-20 border-l shadow-lg bg-white"></app-chat>
+
+</div>

@@ -1,0 +1,27 @@
+.sidebar {
+    position: relative;
+    width: 280px;
+    height: 100vh;
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+}
+.open {
+    transform: translateX(0);
+  }
+  
+  .closed {
+    transform: translateX(-100%);
+  }
+
+.sidebar::-webkit-scrollbar {
+    width: 0.4rem; /* You can adjust the width as needed */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Hide the thumb (the draggable part) */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent; /* Hide the track (the bar) */
+}

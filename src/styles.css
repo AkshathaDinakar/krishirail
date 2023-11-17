@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin:0 ;
+  margin-bottom: 0;
+}
+::ng-deep .mat-typography p {
+  margin: 0;
+}
+.mat-body p, .mat-body-2 p, .mat-typography .mat-body p, .mat-typography .mat-body-2 p, .mat-typography p {
+  margin: 0; /* Change the margin to 0 */
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@layer components {
+    .hamburger div:first-child {
+      
+    }
+    .hamburger div:last-child {
+   
+    }
+  }

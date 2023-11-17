@@ -1,0 +1,29 @@
+<div class="w-full  bg-slate-100 border-b flex  flex-col items-center">
+    <div class="max-w-wid w-div">
+    <div class="max-w-wid">
+        <div class="flex my-5 border-b-2 ">
+            <button class=" hover:bg-slate-200 relative top-1 font-medium p-3 px-6" (click)="selectTab(1)" [class]="activeTab === 1 ? 'text-blue-500 border-b-blue-500 border-b-2' : 'text-gray-500 '">Home</button>
+            <button class=" hover:bg-slate-200 relative top-1 font-medium p-3 px-6" (click)="selectTab(2)" [class]="activeTab === 2 ? 'text-blue-500 border-b-blue-500 border-b-2' : 'text-gray-500 '">Budget</button>
+            <button class=" hover:bg-slate-200 relative top-1 font-medium p-3 px-6" (click)="selectTab(3)" [class]="activeTab === 3 ? 'text-blue-500 border-b-blue-500 border-b-2' : 'text-gray-500 '">Team</button>
+        </div>
+    </div>
+    <div class="max-w-wid overflow-hidden">
+        <div class="bg-gray-100 p-1">
+            <div [@slideInOut]="activeTab">
+                <div *ngIf="activeTab === 1">
+                    <div class="max-w-wid w-96">
+                        <app-content-home></app-content-home>
+                    </div>
+                </div>
+                <div *ngIf="activeTab === 2">
+                    <app-content-budget></app-content-budget>
+                </div>
+                <div *ngIf="activeTab === 3">
+                    <app-content-team></app-content-team>
+                    content-team works
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

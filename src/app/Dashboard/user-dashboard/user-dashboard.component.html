@@ -1,0 +1,17 @@
+<div class="flex">
+    <app-sidebar *ngIf="sidebarService.isSidebarOpen()"></app-sidebar>
+
+    <div class="main w-full ">
+        <div class="main-content overflow-y-auto">
+            <app-navbar><button class=" rounded-full hover:bg-gray-100 text-lg p-2"><img
+                        src="/assets/svgs/svg-export/svgexport-45.svg" alt=""></button>
+            </app-navbar>
+
+            <app-welcome-brian></app-welcome-brian>
+            <app-home-budget-team></app-home-budget-team>
+        </div>
+    </div>
+    <app-chat class="w-20 border-l shadow-lg bg-white"></app-chat>
+
+
+</div>

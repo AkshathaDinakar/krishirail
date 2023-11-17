@@ -1,0 +1,272 @@
+<div class="flex sticky top-0">
+    <div class="sidebar bg-gray-900" [hidden]="state === 'closed'" [@slideInOut]="state">
+        <div style="width: 100%;" class=" w-max sidebar-content  overflow-hidden">
+            <!-- profile -->
+            <div class="flex justify-between items-center">
+
+                <img class="m-6" src="/assets/logo/logo.svg" alt="logo">
+                <div class="profile flex">
+                    <div class="m-3">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-1.svg" alt="">
+                    </div>
+                    <div class="m-3">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-2.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center flex-col items-center ">
+                <div class=" flex mt-2 justify-center ">
+
+                    <img class="w-24 rounded-full" src="/assets/user/login1.jpg" alt="">
+                </div>
+                <p class="text-white leading-none pt-5">userName</p>
+                <p class="text-gray-400 leading-none p-0">username</p>
+            </div>
+            <!-- dashboard -->
+            <div class="dashboard my-0 mx-3 px-2 mt-8">
+                <p class="text-blue-400 text-xs font-bold my-0 mb-0">DASHBOARDS</p>
+                <p class="text-gray-500 my-0 text-xs">Unique dashboard designs</p>
+            </div>
+
+
+            <div class="mx-1 px-1">
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white  rounded-lg">
+                    <a routerLink="/dashboard/project" class=" flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-4.svg" alt="">
+                        <span class="ml-2">Project</span>
+                    </a>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white  rounded-lg">
+                    <a routerLink="/dashboard/analytics" class=" flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-5.svg" alt="">
+                        <span class="ml-2">Analytics</span>
+                    </a>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white  rounded-lg">
+                    <a routerLink="/dashboard/finance" class=" flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-6.svg" alt="">
+                        <span class="ml-2">Finance</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white  rounded-lg">
+                    <a routerLink="/dashboard/crypto" class=" flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-7.svg" alt="">
+                        <span class="ml-2">Crypto</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="dashboard my-0 mx-3 px-2 mt-8">
+                <p class="text-blue-400 text-xs font-bold my-0 mb-0">APPLICATIONS</p>
+                <p class="text-gray-500 my-0 text-xs"> Custom made application designs </p>
+            </div>
+
+
+            <div class="mx-1 px-1">
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#academy" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-8.svg" alt="">
+                        <span class="ml-2">Academy</span>
+                    </a>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#chats" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-9.svg" alt="">
+                        <span class="ml-2">Chats</span>
+                    </a>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#contact" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-10.svg" alt="">
+                        <span class="ml-2">Contact</span>
+                    </a>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#filemanager" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-13.svg" alt="">
+                        <span class="ml-2">FileManager</span>
+                    </a>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#mailbox" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-15.svg" alt="">
+                        <span class="ml-2">Mail Box</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#Notes" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-16.svg" alt="">
+                        <span class="ml-2">Notes</span>
+                    </a>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#scrum" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-17.svg" alt="">
+                        <span class="ml-2">Scrumboard</span>
+                    </a>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#Tasks" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-18.svg" alt="">
+                        <span class="ml-2">Tasks</span>
+                    </a>
+                </div>
+
+
+                <div class="dashboard my-0 mx-3 px-2 mt-8">
+                    <p class="text-blue-400 text-xs font-bold my-0 mb-0">PAGES</p>
+                    <p class="text-gray-500 my-0 text-xs"> Custom made page designs </p>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#activities" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-20.svg" alt="">
+                        <span class="ml-2">Activities</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#maintenance" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-25.svg" alt="">
+                        <span class="ml-2">Maintenance</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#profile" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-26.svg" alt="">
+                        <span class="ml-2">Profile</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#settings" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-27.svg" alt="">
+                        <span class="ml-2">Settings</span>
+                    </a>
+                </div>
+                <div class="dashboard my-0 mx-3 px-2 mt-8">
+                    <p class="text-blue-400 text-xs font-bold my-0 mb-0">USER INTERFACE</p>
+                    <p class="text-gray-500 my-0 text-xs"> Building blocks of the UI & UX </p>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#settings" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-29.svg" alt="">
+                        <span class="ml-2">Material Components</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#Fuse components" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-29.svg" alt="">
+                        <span class="ml-2">Fuse Components</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#Other components" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-29.svg" alt="">
+                        <span class="ml-2">Other Components</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#TailwindCSS" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-30.svg" alt="">
+                        <span class="ml-2">TailwindCSS</span>
+                    </a>
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#Advanced Search" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-31.svg" alt="">
+                        <span class="ml-2">Advanced Search</span>
+                    </a>
+
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#Animations" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-32.svg" alt="">
+                        <span class="ml-2">Animations</span>
+                    </a>
+
+
+                </div>
+
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#card" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-33.svg" alt="">
+                        <span class="ml-2">Cards</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#colour" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-34.svg" alt="">
+                        <span class="ml-2">Colours</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#Conf dia" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-35.svg" alt="">
+                        <span class="ml-2">Confirmation Dialog</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#database" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-38.svg" alt="">
+                        <span class="ml-2">Database</span>
+                    </a>
+                </div>
+                <div
+                    class="text-gray-300 flex text-sm my-1 w-full h-11 pl-3 hover:bg-gray-700 hover:text-white rounded-lg">
+                    <a href="#database" class="flex items-center w-full transition-colors">
+                        <img width="25" src="/assets/svgs/svg-export/svgexport-39.svg" alt="">
+                        <span class="ml-2">Typography</span>
+                    </a>
+                </div>
+
+                <div class="w-full h-1  border-b-2 border-gray-800"></div>
+                <div class="dashboard my-0 mx-3 px-2 mt-8">
+                    <p class="text-blue-400 text-xs font-bold my-0 mb-0">DOCUMENTATION</p>
+                    <p class="text-gray-500 my-0 text-xs"> Everything you need to know about Fuse </p>
+                </div>
+                <div class="w-full h-1  border-b-2 border-gray-800"></div>
+                <div class="dashboard my-0 mx-3 px-2 mt-8">
+                    <p class="text-blue-400 text-xs font-bold my-0 mb-0">NAVIGATION FEATURE</p>
+                    <p class="text-gray-500 my-0 text-xs"> Collapsable levels and badges styles </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+</div>

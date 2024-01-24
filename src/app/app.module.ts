@@ -38,6 +38,8 @@ import { BitcoinComponent } from './charts/bitcoin.component';
 import { ChatComponent } from './comps/chat/chat.component';
 import { ChatlookComponent } from './comps/chatlook/chatlook.component';
 import { ChattingareaComponent } from './comps/chattingarea/chattingarea.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './core/interceptor/httpconfig.interceptor';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,13 @@ import { ChattingareaComponent } from './comps/chattingarea/chattingarea.compone
     AppRoutingModule, NgIf,ReactiveFormsModule,
     BrowserAnimationsModule,FormsModule, NgChartsModule,MatFormFieldModule, MatInputModule, MatSelectModule
   ],
- 
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

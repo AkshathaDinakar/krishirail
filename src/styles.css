@@ -22,3 +22,40 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
    
     }
   }
+.header-fonts{
+  color: #64758b;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.f-18px{
+  font-size: 18px;
+}
+.pl-30px{
+padding-left:30px;
+}
+
+.pr-30px{
+  padding-right: 30px;
+}
+
+.pb-125px{
+  padding-bottom: 1.25rem;
+}
+
+.mb-15rem{
+  margin-bottom: 1.5rem 
+}
+
+.ml-1rem{
+  margin-left: 1rem;
+}
+.custom-overflow{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.custom-overflow::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+

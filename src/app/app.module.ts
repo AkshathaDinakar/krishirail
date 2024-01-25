@@ -16,7 +16,7 @@ import { ContentHomeComponent } from './comps/home-budget-team/content-home/cont
 import { ContentBudgetComponent } from './comps/home-budget-team/content-budget/content-budget.component';
 import { ContentTeamComponent } from './comps/home-budget-team/content-team/content-team.component';
 import { GitissueComponent } from './charts/gitissue.component';
-import { NgChartsModule } from 'ng2-charts';
+import { NgChartsModule} from 'ng2-charts';
 import { TaskdistributionComponent } from './charts/taskdistribution.component';
 import { BudgetDistributionComponent } from './charts/budget-distribution.component';
 import { VisitorOverviewComponent } from './charts/visitor-overview.component';
@@ -40,6 +40,10 @@ import { ChatlookComponent } from './comps/chatlook/chatlook.component';
 import { ChattingareaComponent } from './comps/chattingarea/chattingarea.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './core/interceptor/httpconfig.interceptor';
+import { SummaryComponent } from './comps/summary/summary.component';
+import { AdminDashboardComponent } from './Dashboard/admin-dashboard/admin-dashboard.component';
+import { GitissueComponent2 } from './charts/gitissue2.component';
+import { GitissueComponent3 } from './charts/gitissue3.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +59,8 @@ import { InterceptorService } from './core/interceptor/httpconfig.interceptor';
     ContentBudgetComponent,
     ContentTeamComponent,
     GitissueComponent,
+    GitissueComponent2,
+    GitissueComponent3,
     TaskdistributionComponent,
     BudgetDistributionComponent,
     VisitorOverviewComponent,
@@ -73,12 +79,14 @@ import { InterceptorService } from './core/interceptor/httpconfig.interceptor';
     ChatComponent,
     ChatlookComponent,
     ChattingareaComponent,
+    SummaryComponent,
+    AdminDashboardComponent,
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, NgIf,ReactiveFormsModule,
-    BrowserAnimationsModule,FormsModule, NgChartsModule,MatFormFieldModule, MatInputModule, MatSelectModule
+    BrowserAnimationsModule,FormsModule, NgChartsModule.forRoot(),MatFormFieldModule, MatInputModule, MatSelectModule
   ],
   providers: [
     {

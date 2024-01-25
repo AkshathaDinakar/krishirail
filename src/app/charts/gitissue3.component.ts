@@ -2,14 +2,14 @@ import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
-  selector: 'app-gitissue',
+  selector: 'app-gitissue3',
   template:`<div>
   <canvas id="myChart"></canvas>
 </div>
 `
 
 })
-export class GitissueComponent implements AfterViewInit {
+export class GitissueComponent3 implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
 
   ngAfterViewInit() {
@@ -52,8 +52,8 @@ export class GitissueComponent implements AfterViewInit {
           {
             type: 'line',
             label: 'New Issue',
-            data: [42, 28, 43, 34, 20, 25, 22],
-            borderColor: '#1c4ed8', // Change line color to gray
+            data: [20, 25, 28, 34, 40, 45, 50],
+            borderColor: 'green', // Change line color to gray
           },
         ],
         labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'],

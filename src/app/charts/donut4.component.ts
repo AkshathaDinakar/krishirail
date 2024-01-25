@@ -3,7 +3,7 @@ import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-donut4',
-  template: `<canvas id="donutChart4" width="150"></canvas>`
+  template: `<canvas id="donutChart4" width="150" style="height:230px;width:230px"></canvas>`
 })
 export class Donut4Component implements OnInit {
   donutChart: any;
@@ -19,8 +19,8 @@ export class Donut4Component implements OnInit {
         label: 'My Fourth Dataset',
         data: [80, 120],
         backgroundColor: [
-          'rgb(255, 165, 0)',
-          'rgb(255, 105, 180)'
+          '#b794f4',
+          '#805ad5'
         ],
         hoverOffset: 4
       }]

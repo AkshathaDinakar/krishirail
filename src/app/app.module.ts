@@ -44,7 +44,14 @@ import { SummaryComponent } from './comps/summary/summary.component';
 import { AdminDashboardComponent } from './Dashboard/admin-dashboard/admin-dashboard.component';
 import { GitissueComponent2 } from './charts/gitissue2.component';
 import { GitissueComponent3 } from './charts/gitissue3.component';
-
+import { ConfigurationComponent } from './Dashboard/configuration/configuration.component';
+import { TrainDetailsComponent } from './Dashboard/configuration/train-details/train-details.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import {MatIconModule} from '@angular/material/icon';
+import { DisableTrainModalComponent } from './shared/modals/disable-train-modal/disable-train-modal.component';
+import { ConfirmationComponent } from './shared/modals/confirmation/confirmation.component';
+import { BsModalService } from "ngx-bootstrap/modal";
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,14 +88,20 @@ import { GitissueComponent3 } from './charts/gitissue3.component';
     ChattingareaComponent,
     SummaryComponent,
     AdminDashboardComponent,
+    ConfigurationComponent,
+    TrainDetailsComponent,
+    DisableTrainModalComponent,
+    ConfirmationComponent,
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, NgIf,ReactiveFormsModule,
-    BrowserAnimationsModule,FormsModule, NgChartsModule.forRoot(),MatFormFieldModule, MatInputModule, MatSelectModule
+    BrowserAnimationsModule,FormsModule, NgChartsModule.forRoot(),MatFormFieldModule, MatInputModule, MatSelectModule,
+    MatNativeDateModule,MatDatepickerModule,MatIconModule
   ],
   providers: [
+    BsModalService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptorService,

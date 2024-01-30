@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 *{
   margin:0 ;
   margin-bottom: 0;
@@ -31,6 +32,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .f-18px{
   font-size: 18px;
 }
+.f-12px{
+  font-size: 12px;
+}
 .pl-30px{
 padding-left:30px;
 }
@@ -59,3 +63,78 @@ padding-left:30px;
   display: none;  /* Safari and Chrome */
 }
 
+.g-20px{
+  gap:20px;
+}
+.g-10px{
+  gap:10px;
+}
+.border-black-500{
+  border : 3px solid black;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.p-absolute{
+  position :absolute;
+}
+
+.date-icon{
+  top:-3px;
+  right:0px;
+}
+.tecxt-center{
+  text-align: center;
+}
+
+.text-black{
+  color: #1e293b;
+}
+
+.border-dark{
+  border-color: #70707052;
+}
+
+.px-1rem{
+padding-left:1rem;
+padding-right: 1rem;
+}
+
+.p-03px{
+  padding: 0.3rem;
+}
+.pt-03px{
+  padding-top:0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.text-light-grey{
+  color : #64758b
+}
+
+.w-div-70{
+  width: 72vw;
+}
+
+.c-pointer{
+  cursor: pointer;
+}
+
+.sub-headings{
+  color: #64758b;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sub-details{
+  color: #475569;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.mx-1px{
+  margin-left: 1px;
+  margin-right: 1px;
+}

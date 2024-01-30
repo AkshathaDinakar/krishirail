@@ -1,0 +1,142 @@
+<div class="flex bg bg-slate-100">
+    <app-sidebar *ngIf="sidebarService.isSidebarOpen()"></app-sidebar>
+
+    <div class="main w-full">
+        <div class="main-content overflow-y-auto ">
+            <app-navbar><button class=" rounded-full hover:bg-gray-100 text-lg p-2"><img
+                src="/assets/svgs/svg-export/svgexport-45.svg" alt=""></button>
+    </app-navbar>
+            <!-- Overall Summary content here -->
+            <div class="flex pt-5 pr-30px pl-30px">
+                
+                    <div class="w-full">
+                      
+                        <div class=" rounded-3xl overflow-hidden p-6 bg-white shadow-md">
+                            <div class="flex justify-between items-center mb-3">
+                               
+                                    <p class="header-fonts">Trains</p>
+                                    <button class="text-white bg-blue-700 hover:bg-blue-800  focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" (click)="addTrain('add')">
+                                        <!-- <img class="pr-1" src="/assets/svgs/svg-export/svgexport-70.svg" alt=""> -->
+                                        Add New Train
+                                    </button>
+                            </div>
+                            <div class="overflow-x-auto w-div">
+                            <table class="">
+                                <thead>
+                                    <tr>
+                                        <th class="px-6 py-4 border-b-2   text-left">Tr. No</th>
+                                        <th class="px-6 py-4 border-b-2  text-left">Name</th>
+                                        <th class="px-6 py-4 border-b-2  text-left">Origin</th>
+                                        <th class="px-6 py-4 border-b-2  text-left">Destination</th>
+                                        <th class="px-6 py-4 border-b-2  text-left">Distance</th>
+                                        <th class="px-6 py-4 border-b-2  text-left">Duration</th>
+                                        <th class="px-6 py-4 border-b-2  text-left">Stops</th>
+                                        <th class="px-6 py-4 border-b-2  text-left">Frequency</th>
+                                        <th class="px-6 py-4 border-b-2  text-left">End Date</th>
+                                        <th class="px-6 py-4 border-b-2  text-left">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let transaction of recentTransactions" class="mb-4">
+                                        <td class="px-6 py-5 border-b-2  whitespace-nowrap">
+                                            {{
+                                            transaction.id }}</td>
+                                        <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.trainName }}
+                                        </td>
+                                        <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.origin }}
+                                        </td>
+                                        <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.destination }}</td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.distance }}
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.duration }}
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.stops }}
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.frequency }}
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">{{ transaction.endDate }}
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">
+                                                <div class="flex g-10px text-light-grey">
+                                                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="c-pointer" title="edit" (click)="addTrain('edit')">edit</mat-icon>
+                                                    <button type="button" data-modal-target="medium-modal" data-modal-toggle="medium-modal" (click)="deleteTrain(transaction)">
+                                                        <mat-icon aria-hidden="false" aria-label="Example home icon" class="c-pointer" title="delete" >delete</mat-icon>
+                                                    </button>
+                                                   
+                                                </div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+            <!-- next section -->
+            <div class="flex pt-5 pr-30px pl-30px"></div>
+        </div>
+        
+    </div>
+</div>
+
+
+    <div id="medium-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-lg max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow ">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600">
+                    <p class="header-fonts">Disable Train</p>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="medium-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <div class="flex g-10px justify-between">
+                        <div class="flex items-center mb-4 g-10px">
+                            <input id="country-option-1" type="radio" name="countries" value="USA"
+                                class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
+                                checked>
+                            <label for="country-option-1" class="text-slate-600">
+                                Disable Immediately
+                            </label>
+                        </div>
+                        <div class="flex items-center mb-4 g-10px relative">
+                            <input id="country-option-1" type="radio" name="countries" value="USA"
+                                class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="country-option-1" class="text-slate-600">
+                                Disable Effective
+                            </label>
+                            <input matInput [matDatepicker]="picker2"
+                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                id="inline-full-name" type="text">
+                            <mat-datepicker-toggle matPrefix [for]="picker2"
+                                class="p-absolute date-icon"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                        </div>
+                       
+                    </div>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        There are 6 active bookings on this train. Disabling the train will automatically cancel them. Are you sure you want to continue?
+                    </p>
+                   
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600 justify-center">
+                    <button data-modal-hide="medium-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Continue</button>
+                    <button data-modal-hide="medium-modal" type="button" class="ms-3 text-gray-500 bg-white hover:bg-gray-100 focus:outline-none  rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+

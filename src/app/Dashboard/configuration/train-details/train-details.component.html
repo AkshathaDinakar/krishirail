@@ -1,0 +1,270 @@
+<div class="flex bg bg-slate-100">
+    <app-sidebar *ngIf="sidebarService.isSidebarOpen()"></app-sidebar>
+
+    <div class="main w-full">
+        <div class="main-content overflow-y-auto ">
+            <app-navbar><button class=" rounded-full hover:bg-gray-100 text-lg p-2"><img
+                        src="/assets/svgs/svg-export/svgexport-45.svg" alt=""></button>
+            </app-navbar>
+            <!-- Train Details -->
+            <div class="flex pt-5 pr-30px pl-30px">
+
+                <div class="w-full">
+                    <div class=" rounded-3xl overflow-hidden p-6 bg-white shadow-md">
+                        <div class="flex justify-between items-center mb-3">
+                                <p class="header-fonts text-black">Add New Train</p>
+                        </div>
+                            <!--Add/Edit Train Details-->
+                        <div class="overflow-x-auto w-div-70">
+                            <p class="sub-headings">Train Details</p>
+                                <div class="flex relative justify-between grid grid-cols-12 g-20px mx-1px">
+                                    <div style="padding: 10px 0px" class="col-span-3">
+                                        <div class="text-slate-600 sub-details">Train No</div>
+                                        <div>
+                                            <input
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name" type="text">
+                                        </div>
+
+                                    </div>
+                                    <div style="padding: 10px 0px" class="col-span-3">
+                                        <div class="text-slate-600 sub-details">Train Name</div>
+                                        <div>
+                                            <input
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name" type="text">
+                                        </div>
+
+                                    </div>
+                                    <div style="padding: 10px 0px" class="col-span-3">
+                                        <div class="text-slate-600 sub-details">Origin Station</div>
+                                        <div>
+                                            <input
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name" type="text">
+                                        </div>
+                                    </div>
+                                    <div style="padding: 10px 0px" class="col-span-3">
+                                        <div class="text-slate-600 sub-details">Destination Station</div>
+                                        <div>
+                                            <input
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name" type="text">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="flex relative justify-between grid grid-cols-12 g-20px mx-1px">
+                                    <div style="padding: 10px 0px" class="col-span-3">
+                                        <div class="text-slate-600 sub-details">Total Distance</div>
+                                        <div class="flex g-10px align-items-center">
+                                            <input
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name" type="text">
+                                            <span class="text-slate-600">Kms.</span>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 10px 0px" class="col-span-3">
+                                        <div class="text-slate-600 sub-details">Duration</div>
+                                        <div class="flex align-items-center g-10px">
+                                            <input
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name" type="number" placeholder="HH">
+                                            <span>:</span>
+                                            <input
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name" type="number" placeholder="MM">
+                                        </div>
+                                    </div>
+                                    <div style="padding: 10px 0px" class="col-span-3">
+                                        <div class="text-slate-600 sub-details">Frequency</div>
+                                        <div class="select_box relative">
+                                            <select id="countries"
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500">
+                                                <option selected value="" disabled></option>
+                                                <option *ngFor="let item of frequencies">{{item?.name}}</option>
+                                            </select>
+                                            <!-- <input class="border border-gray-200 rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="text" > -->
+                                        </div>
+
+                                    </div>
+                                    <div style="padding: 10px 0px" class="col-span-3">
+                                        <div class="text-slate-600 sub-details">Effective Date</div>
+                                        <div class="flex relative">
+                                            <input matInput [matDatepicker]="picker"
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name" type="text">
+                                            <mat-datepicker-toggle matPrefix [for]="picker"
+                                                class="p-absolute date-icon"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex relative justify-between grid grid-cols-12 g-20px mx-1px">
+                                    <div style="padding: 10px 0px" class="col-span-5">
+                                        <div class="text-slate-600 sub-details">End Date</div>
+                                        <div class="flex g-10px justify-between">
+                                            <div class="flex items-center mb-4 g-10px">
+                                                <input id="country-option-1" type="radio" name="countries" value="USA"
+                                                    class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
+                                                    checked>
+                                                <label for="country-option-1" class="text-slate-600">
+                                                    Until Cancelled
+                                                </label>
+                                            </div>
+                                            <div class="flex items-center mb-4 g-10px relative">
+                                                <input id="country-option-1" type="radio" name="countries" value="USA"
+                                                    class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600">
+                                                <label for="country-option-1" class="text-slate-600">
+                                                    Date
+                                                </label>
+                                                <input matInput [matDatepicker]="picker1"
+                                                    class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                    id="inline-full-name" type="text">
+                                                <mat-datepicker-toggle matPrefix [for]="picker1"
+                                                    class="p-absolute date-icon"></mat-datepicker-toggle>
+                                                <mat-datepicker #picker1></mat-datepicker>
+                                            </div>
+                                            <!-- <input class="border border-gray-200 rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="text" >
+                                            <input class="border border-gray-200 rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="text" > -->
+                                        </div>
+
+                                    </div>
+
+                                    <div style="padding: 10px 0px" class="col-span-7">
+                                        <div class="text-slate-600 sub-details">Capacity Breakdown (Tons)</div>
+                                        <div class="flex g-10px justify-between">
+                                            <div>
+                                                <input
+                                                    class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                    id="inline-full-name" type="text">
+                                                <div class="text-slate-600 tecxt-center f-12px">Frozen (-16 Deg. C)
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <input
+                                                    class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                    id="inline-full-name" type="text">
+                                                <div class="text-slate-600 tecxt-center f-12px">Chilled (+4 Deg. C)
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <input
+                                                    class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                    id="inline-full-name" type="text">
+                                                <div class="text-slate-600 tecxt-center f-12px">Controlled (+18 Deg. C)
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                        </div>
+                       
+                        <div class="my-5 border"></div>
+                        <!--Add/Edit Station Details-->
+                        <div class="overflow-x-auto w-div-70">
+                            <div class="flex justify-between align-items-center">
+                                <p class="sub-headings">Station Details</p>
+                                <button class="text-white bg-blue-700 hover:bg-blue-800  focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" (click)="addStation()">
+                                    Add Another Station
+                                </button>
+                            </div>
+                        <div class="w-div-70">
+                            <form [formGroup]="trainDetailsForm" id="form_scroll">
+                                <table class="">
+                                    <thead>
+                                        <tr>
+                                            <th class="px-6 py-4 border-b-2  sub-details text-left">
+                                                Station No.</th>
+                                            <th class="px-6 py-4 border-b-2 sub-details text-left">Station Name</th>
+                                            <th class="px-6 py-4 border-b-2 sub-details text-left">Arrival (Tentative)</th>
+                                            <th class="px-6 py-4 border-b-2 sub-details text-left">Departure (Tentative)</th>
+                                            <th class="px-6 py-4 border-b-2 sub-details text-left">Wait Duration (in mins.)</th>
+                                            <th class="px-6 py-4 border-b-2 sub-details text-left">Total Distance (Kms.)</th>
+                                            <th class="px-6 py-4 border-b-2 sub-details text-left">Day</th>
+                                            <th class="px-6 py-4 border-b-2 sub-details text-left">
+                                                <!-- *ngIf="station().controls.length > 1" -->
+                                                <span  >Action</span></th>
+                                        </tr>
+                                    </thead>
+                                   
+                                    <tbody formArrayName="stationList">
+                                       <tr class="mb-4" *ngFor="
+                                        let item of station().controls;
+                                        let i = index" [formGroupName]="i">
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">
+                                                <input formControlName="st_No" *ngIf="i > 0"
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name1" type="text">
+                                                <p *ngIf="i==0">Origin</p>
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">
+                                                <input formControlName="station_name"
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name2" type="text">
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">
+                                                <input formControlName="arrival"
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name3" type="text">
+                                            </td>
+                                            <td class="px-6 py-5 border-b-2  whitespace-nowrap">
+                                                <input formControlName="departure"
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name4" type="text">
+                                            </td>
+                                                <td class="px-6 py-5 border-b-2  whitespace-nowrap">
+                                                    <input formControlName="duration"
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name5" type="text">
+                                                </td>
+                                                <td class="px-6 py-5 border-b-2  whitespace-nowrap">
+                                                    <input formControlName="total_distance"
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name6" type="text">
+                                                </td>
+                                                <td class="px-6 py-5 border-b-2  whitespace-nowrap">
+                                                    <input formControlName="day"
+                                                class="border border-gray-200 border-dark rounded w-full py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500"
+                                                id="inline-full-name7" type="text">
+                                                </td>
+                                                <td class="px-6 py-5 border-b-2  text-light-grey  whitespace-nowrap"  >
+                                                    <p *ngIf=" i == 0">--</p>
+                                                    <div  *ngIf="
+                                                    i  || (i > 0 && station().controls.length > 1)" (click)="deletekey(item, i)" title="Delete" class="c-pointer">
+                                                  <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+                                                    </div>
+                                                </td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                   
+                                </table>
+                            </form>
+                            </div>
+                        </div>
+                        <!--Save Train Details-->
+                        <div class="w-div-70 flex justify-center pt-5">
+                            <button class="text-white bg-blue-700 hover:bg-blue-800  focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >
+                                Save Train
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+ 
+            <!-- next section -->
+            <div class="flex pt-5 pr-30px pl-30px"></div>
+        </div>
+
+    </div>
+</div>
